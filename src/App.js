@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "./assets/img/logo.naranja.png";
+import logo from "./assets/img/logo.png";
 import "./App.css";
 import {MediaComponent, ZoomComponent} from "./components";
 
@@ -23,33 +23,33 @@ function App() {
     <div className="App">
       {!joinMeeting && !startMeeting ? (
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo}  alt="logo" />
           {/* <MediaComponent /> */}
           <p>Ingrese los datos requeridos para unirse a la reunión</p>
           <div className="container">
             <input
-              className="vu-input-text item"
+              className="input-text item"
               type="text"
               placeholder="Meeting Number"
               defaultValue={meetingNumber}
               onChange={(e) => setMeetingNumber(e.target.value)}
             ></input>
             <input
-              className="vu-input-text item"
+              className="input-text item"
               type="text"
               placeholder="Username"
               defaultValue={username}
               onChange={(e) => setUsername(e.target.value)}
             ></input>
             <input
-              className="vu-input-text item"
+              className="input-text item"
               type="email"
               placeholder="User Email"
               defaultValue={userEmail}
               onChange={(e) => setUserEmail(e.target.value)}
             ></input>
             <input
-              className="vu-input-text item"
+              className="input-text item"
               type="password"
               placeholder="Password Meet"
               defaultValue={password}
@@ -57,10 +57,10 @@ function App() {
             ></input>
           </div>
           <div className="container">
-            <button className="vu-btn" onClick={HandleJoinMeeting}>
+            <button className="btn" onClick={HandleJoinMeeting}>
               Join Meeting
             </button>
-            <button className="vu-btn" onClick={HandleStartMeeting}>
+            <button className="btn" onClick={HandleStartMeeting}>
               Start Meeting
             </button>
           </div>
